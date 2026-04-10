@@ -43,5 +43,11 @@ The strategy successfully constructs a theoretically risk-neutral portfolio, but
 - Fourier pricing methods (Lewis formula)
 - Variance Gamma model
 
-## Notes
-Group project developed at Politecnico di Milano (Computational Finance, AY 2025–2026).
+## Co-authors
+- Bacchi Leonardo
+- Casciani Alice Sofia
+- Crivellaro Federico
+- Imperatore Gaia
+
+
+*This project was developed for academic purposes as part of the **Computational Finance** course at **Politecnico di Milano (PoliMI)**.
