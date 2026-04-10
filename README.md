@@ -3,7 +3,7 @@
 ## Overview
 This project develops a full pricing and hedging framework for a structured autocallable certificate on the S&P 500, using advanced stochastic modeling and market-consistent calibration.
 
-The objective is to construct a self-financing hedging strategy that neutralizes key risk factors (delta, vega, and volatility skew) while minimizing transaction costs.
+The objective is to construct a self-financing hedging strategy that neutralizes key risk factors (delta, vega, and volatility skew).
 
 ## Methodology
 
