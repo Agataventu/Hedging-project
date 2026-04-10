@@ -1,0 +1,23 @@
+function [fwd_bid, fwd_ask] = findCallPutFwd( ...
+    CallexpDates, CallStrikes, CallBid, CallAsk, ...
+    PutexpDates, PutStrikes, PutBid, PutAsk, ...
+    disc, ExpDates, fwd)
+
+    % Reorder and match calls and puts
+    [CallexpDatesMatched, CallStrikesMatched, CallBidMatched, CallAskMatched, ...
+     PutexpDatesMatched,  PutStrikesMatched,  PutBidMatched,  PutAskMatched, ...
+     MatchMap] = ReorderPutCallMatches( ...
+                    CallexpDates, CallStrikes, CallBid, CallAsk, ...
+                    PutexpDates,  PutStrikes,  PutBid, PutAsk);
+
+    % Interpolate discount factor ON matched expiries
+    ExpDates
+    disc(2:end)
+    disc_interp = interp1(ExpDates, disc(2:end), CallexpDatesMatched);
+
+    % fwd_ask = min((CallAskMatched - PutBidMatched) ./ disc_interp + CallStrikesMatched); 
+    % fwd_bid = max((CallBidMatched - PutAskMatched) ./ disc_interp + CallStrikesMatched); 
+
+    fwd_bid = fwd;
+    fwd_ask = fwd;
+end
